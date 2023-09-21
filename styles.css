@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --fs : 16px;
+    --ff-primary:'Red Hat Display', sans-serif;
+    --fw-medium: 500;
+    --fw-bold: 700;
+    --fw-black: 900;
+
+    /* Colors */
+    --pale-blue : hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--ff-primary);
+    font-size: var(--fs);
+}
+
+main{
+    background-image: url("./images/pattern-background-desktop.svg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    background-color: var(--pale-blue);
+}
+
+
+
+.card {
+  width: 25rem ;
+  background-color: #FFFFFF;
+  z-index: 10;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0; 
+  border-radius: 20px;
+  overflow: hidden;
+}
+  
+.card__img{
+    overflow: hidden;
+}
+
+
+.card__description{
+    padding: 35px;
+    text-align: center;
+}
+
+.card__title{
+    margin-bottom: 10px;
+    font-weight: var(--fw-black);
+    font-size: 32px;
+    color: var(--dark-blue);
+}
+
+.card__subtitle{
+    margin-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    opacity: 0.75;
+}
+
+.card__plan {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 5fr 1fr;
+    background-color: #F4F7FF;
+    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.card__plan__item{
+    text-align: center;
+    margin-right: 10px;
+}
+
+.card__plan__item a{
+    color: var(--desaturated-blue);
+}
+
+.card__plan__price{
+    justify-self: start;
+}
+.card__plan__price p {
+    font-weight: var(--fw-black);
+    color: var(--dark-blue);
+}
+
+.card__plan__price span {
+    opacity: 0.75;
+}
+
+
+
+.card__btn{
+    border: 0;
+    padding: 18px;
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card__btn__primary{
+    background-color: var(--bright-blue);
+    color: #FFFFFF;
+    box-shadow: 0.5rem 1rem 2rem hsl(224, 23%, 55%, 0.5);
+}
+
+.card__cancel{
+    opacity: 0.75;
+    margin-top: 28px;
+}
+
+@media screen and (max-width: 425px){
+    main{
+        background-image: url("./images/pattern-background-mobile.svg");
+    }
+    
+    .card{
+        width: 90%;
+    }
+
+}
